@@ -1,0 +1,276 @@
+<div class="container">
+  <div class="row">
+    <!--FORM-->
+    <div class="col-md-5 offset-md-3">
+      <div class="card">
+        <div class="card-body">
+          <form action="/tasks/{{task._id}}/edit" method="post">
+            <div class="row">
+              <div class="col-1">
+                <label class="form-label" for="formNo">Form.No</label>
+              </div>
+              <div class="col-4">
+                <input
+                  id="formNo"
+                  class="form-control"
+                  type="number"
+                  name="formNo"
+                  placeholder="Numero de Formulario"
+                /></div>
+            </div>
+            <div class="row">
+              <h5 class="pt-0">Ministerio de Obras Publicas y Comunicaciones</h5>
+              <h5 class="pt-1">(MOPC)</h5>
+            </div>
+            <br />
+            <h5 style="padding: 0 0 0 33%;">Formulario Entrega de Recursos</h5>
+            <h5 style="padding: 0 0 0 34%;">Fondo Reponible Institucional</h5>
+            <h5 style="padding: 0 0 0 42%;">Entregado por</h5>
+            {{! input ck}}
+            <div class="row">
+              <div class="col-1">
+                <label class="form-label" for="ck">#CK</label></div>
+              <div class="col-4">
+                <input
+                  id="ck"
+                  class="form-control"
+                  type="text"
+                  name="ck"
+                  placeholder="CK"
+                /></div></div>
+
+            {{! Input nombre/apellido }}
+            <div class="row">
+              <div class="col-1" style="padding: 0 5% 0 0;">
+                <label class="form-label" for="nombre">Nombres</label></div>
+              <div class="col-4">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="nombre"
+                  placeholder="Title"
+                  value="{{task.nombre}}"
+                /></div>
+
+              <div class="col-2" style="margin:0 -7% 0 0;">
+                <label class="form-label" for="apellido">Apellidos</label></div>
+              <div class="col-4">
+                <input
+                  id="apellido"
+                  class="form-control"
+                  type="text"
+                  name="apellido"
+                  placeholder="Apellido"
+                /></div>
+
+            </div>
+            {{! Input cedula/puesto}}
+            <div class="row">
+              <div class="col-1">
+                <label class="form-label" for="cedula">Cedula</label></div>
+              <div class="col-4">
+                <input
+                  id="cedula"
+                  class="form-control"
+                  type="text"
+                  name="cedula"
+                  placeholder="Cedula"
+                /></div>
+
+              <div class="col-2" style="margin:0 -7% 0 0;">
+                <label class="form-label" for="puesto">Puesto</label></div>
+              <div class="col-4">
+                <input
+                  id="puesto"
+                  class="form-control"
+                  type="text"
+                  name="puesto"
+                  placeholder="Puesto"
+                /></div>
+
+            </div>
+            {{! Input departamento}}
+            <div class="row">
+              <div class="col-1" style="padding: 0 18% 0 0;">
+                <label
+                  class="form-label"
+                  for="departamento"
+                >Departamento</label></div>
+              <div class="col-9" style="padding: 0 10% 0 0;">
+                <input
+                  id="departamento"
+                  class="form-control"
+                  type="text"
+                  name="departamento"
+                  placeholder="Departamento"
+                /></div>
+            </div>
+            {{! Input CK/MOTIVO ck }}
+            <div class="row">
+              <div class="col-1">
+                <label class="form-label" for="ckMotivo">#CK</label></div>
+              <div class="col-4">
+                <input
+                  id="ckMotivo"
+                  class="form-control"
+                  type="text"
+                  name="ckMotivo"
+                  placeholder="CK"
+                /></div>
+
+              <div class="col-2" style="padding:0 -7% 0 0;">
+                <label class="form-label" for="motivoCK">Motivo del CK</label></div>
+              <div class="col-4" style="padding:0 9% 0 0;">
+                <textarea
+                  id="motivoCK"
+                  class="form-control"
+                  name="motivoCK"
+                  cols="50"
+                  placeholder="Motivo de CK"
+                ></textarea></div>
+
+            </div>
+
+            <div class="row">
+              <div class="col-1" style="margin:-3% 0 0 0;">
+                <label class="form-label" for="fecha">Fecha</label></div>
+              <div class="col-4" style="margin:-3% 0 0 0;">
+                <input
+                  id="fecha"
+                  class="form-control"
+                  type="date"
+                  name="fecha"
+                  placeholder="Fecha"
+                /></div></div>
+
+            <h5 style="padding: 0 0 0 42%;">Recibido por</h5>
+            {{! Input nombre/apellido }}
+            <div class="row">
+              <div class="col-1" style="padding: 0 5% 0 0;">
+                <label
+                  class="form-label"
+                  for="nombreRecibido"
+                >Nombres</label></div>
+              <div class="col-4">
+                <input
+                  id="nombreRecibido"
+                  class="form-control"
+                  type="text"
+                  name="nombreRecibido"
+                  placeholder="Nombre"
+                /></div>
+
+              <div class="col-2" style="margin:0 -7% 0 0;">
+                <label
+                  class="form-label"
+                  for="apellidoRecibido"
+                >Apellidos</label></div>
+              <div class="col-4">
+                <input
+                  id="apellidoRecibido"
+                  class="form-control"
+                  type="text"
+                  name="apellidoRecibido"
+                  placeholder="Apellido"
+                /></div>
+
+            </div>
+            {{! Input cedula/puesto}}
+            <div class="row">
+              <div class="col-1">
+                <label
+                  class="form-label"
+                  for="cedulaRecibido"
+                >Cedula</label></div>
+              <div class="col-4">
+                <input
+                  id="cedulaRecibido"
+                  class="form-control"
+                  type="text"
+                  name="cedulaRecibido"
+                  placeholder="Cedula"
+                /></div>
+
+              <div class="col-2" style="margin:0 -7% 0 0;">
+                <label
+                  class="form-label"
+                  for="puestoRecibido"
+                >Puesto</label></div>
+              <div class="col-4">
+                <input
+                  id="puestoRecibido"
+                  class="form-control"
+                  type="text"
+                  name="puestoRecibido"
+                  placeholder="Puesto"
+                /></div>
+
+            </div>
+            {{! Input departamento}}
+            <div class="row">
+              <div class="col-1" style="padding: 0 18% 0 0;">
+                <label
+                  class="form-label"
+                  for="departamentoRecibido"
+                >Departamento</label></div>
+              <div class="col-9" style="padding: 0 10% 0 0;">
+                <input
+                  id="departamentoRecibido"
+                  class="form-control"
+                  type="text"
+                  name="departamentoRecibido"
+                  placeholder="Departamento"
+                /></div>
+            </div>
+            {{! Input CK/MOTIVO ck }}
+            <div class="row">
+              <div class="col-1">
+                <label
+                  class="form-label"
+                  for="ckMotivoRecibido"
+                >#CK</label></div>
+              <div class="col-4">
+                <input
+                  id="ckMotivoRecibido"
+                  class="form-control"
+                  type="text"
+                  name="ckMotivoRecibido"
+                  placeholder="CK"
+                /></div>
+
+              <div class="col-2" style="padding:0 -7% 0 0;">
+                <label class="form-label" for="motivoCKRecibido">Motivo del CK</label></div>
+              <div class="col-4" style="padding:0 9% 0 0;">
+                <textarea
+                  id="motivoCKRecibido"
+                  class="form-control"
+                  name="motivoCKRecibido"
+                  cols="50"
+                  placeholder="Motivo de CK"
+                ></textarea></div>
+
+            </div>
+            {{!-- <div class="mb-3">
+              <input
+                class="form-control"
+                type="text"
+                name="nombre"
+                placeholder="Title"
+                value="{{task.nombre}}"
+              />
+            </div>
+            <div class="mb-3">
+              <textarea
+                class="form-control"
+                name="apellido"
+                rows="3"
+                placeholder="Add a Description"
+              >{{task.apellido}}</textarea>
+            </div> --}}
+            <button class="btn btn-primary" type="submit">Update</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

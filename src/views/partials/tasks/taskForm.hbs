@@ -1,0 +1,148 @@
+
+<div class="container text-white">
+  <form action="/tasks/add" method="post" >
+  {{! numero documento}}
+  <div class="row justify-content-start">
+  <div class="col-2">
+   <label>Form.No</label></div>
+   <div class="col-5 ">
+   <input
+        id="formNo"
+        class="input-group mb-3 col align-self-start bg-dark text-white"
+        type="text"
+        name="formNo"
+        placeholder="Title"
+      
+      /></div>
+      </div>
+      {{! Titulo principal }}
+      <div class="row">
+        <div class="col-10">
+<h5>Ministerio de Obras Publicas y Comunicaciones</h5></div>
+   <div class="col-10" style="position: ;">
+                <h5>MOPC</h5></div></div>
+                <br/>
+                <h5>Formulario Entrega de Recursos</h5> 
+                <h5>Fondo Reponible Institucional</h5> 
+                <h5>Entregado por</h5>
+  
+{{! input ck}}
+   <div class="row justify-content-start">
+  <div class="col-1" >
+   <label>#CK</label></div>
+   <div class="col-5 ">
+   <input
+        id="ck"
+        class="input-group mb-3 col align-self-end bg-dark text-white"
+        type="text"
+        name="ck"
+        placeholder="Title"
+      
+      /></div></div>
+{{! Input nombre/apellido }}
+      <div class="row justify-content-start">
+  <div class="col-2">
+   <label>Nombres</label></div>
+   <div class="col-4">
+   <input
+        id="nombre"
+        class="input-group mb-3 col align-self-end bg-dark text-white"
+        type="text"
+        name="nombre"
+        placeholder="Title"
+      
+      /></div>
+
+       <div class="col-2">
+   <label>Apellidos</label></div>
+   <div class="col-4">
+   <input
+        id="apellido"
+        class="input-group mb-2 col align-self-end bg-dark text-white"
+        type="text"
+        name="apellido"
+        placeholder="Title"
+      
+      /></div>
+      
+      </div>
+      {{! Input cedula/puesto/departamento}}
+      <div class="d-flex justify-content-start">
+  <div class="col-2 ms-0">
+   <label>Cedula</label></div>
+   <div class="col-4 ">
+   <input
+        id="cedula"
+        class="input-group ms-0 me-0 col align-self-end bg-dark text-white"
+        type="text"
+        name="cedula"
+        placeholder="Title"
+      
+      /></div>
+
+       <div class="col-2">
+   <label>Puesto</label></div>
+   <div class="col-4">
+   <input
+        id="puesto"
+        class="input-group mb-2 col align-self-end bg-dark text-white"
+        type="text"
+        name="puesto"
+        placeholder="Title"
+      
+      /></div>
+      <div class="col-4">
+   <label>Departamento</label></div>
+   <div class="col-4 ">
+   <input
+        id="departamento"
+        class="input-group mb-2 col align-self-end bg-dark text-white"
+        type="text"
+        name="departamento"
+        placeholder="Title"
+      
+      /></div>
+      
+      </div>
+{{! input ck/motivo}}
+   <div class="d-flex justify-content-start">
+  <div class="col-1">
+   <label>#CK</label></div>
+   <div class="col-3">
+   <input
+        id="ckMotivo"
+        class="input-group mb-3 col align-self-start bg-dark text-white"
+        type="text"
+        name="ckMotivo"
+        placeholder="Title"
+      
+      /></div>
+  
+<div class="col-3">
+   <label>Motivo del CK</label></div>
+   <div class="col-5">
+      <textarea
+        class="form-control rounded-0 bg-dark text-white"
+        name="motivoCK"
+        cols="50"
+        placeholder="Add a Description"
+      ></textarea></div>
+      
+      </div>
+      <div class="col-5">
+   <label>Fecha de Entrega</label></div>
+   <div class="col-3">
+   <input
+        id="fehaEntrega"
+        class="input-group mb-2 col align-self-end bg-dark text-white"
+        type="text"
+        name="fehaEntrega"
+        placeholder="Title"
+      
+      /></div>
+    
+
+    <button class="btn btn-primary" type="submit">Add</button>
+  </form>
+</div>
+</div>
