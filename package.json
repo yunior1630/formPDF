@@ -1,6 +1,7 @@
 {
   "name": "express-mogodb",
   "version": "1.0.0",
+  "homepage": "http://mopc-srv-dev01/chequemopc/",
   "description": "![](docs/screenshot.png)",
   "main": "index.js",
   "directories": {
