@@ -6,21 +6,21 @@ import {
   taskToggleDone,
   renderTaskEdit,
   editTask,
+  renderTasksEmpresa,
 } from "../controllers/tasks.controllers";
 
 const router = Router();
 const routerServer = "/chequemopc"
 // Render all tasks
-router.get(routerServer, renderTasks);
+router.get("/", renderTasks);
+router.post("/tasks/add", createTask);
 
-router.post(routerServer + "/tasks/add", createTask);
+router.get("/tasks/:id/toggleDone", taskToggleDone);
 
-router.get(routerServer + "/tasks/:id/toggleDone", taskToggleDone);
+router.get("/tasks/:id/edit", renderTaskEdit);
 
-router.get(routerServer + "/tasks/:id/edit", renderTaskEdit);
+router.post("/tasks/:id/edit", editTask);
 
-router.post(routerServer + "/tasks/:id/edit", editTask);
-
-router.get(routerServer + "/tasks/:id/delete", deleteTask);
+router.get("/tasks/:id/delete", deleteTask);
 
 export default router;

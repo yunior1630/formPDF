@@ -10,7 +10,6 @@ export const renderTasks = async (req, res) => {
     return res.render("error", { errorMessage: error.message });
   }
 };
-
 export const createTask = async (req, res, next) => {
 
   try {

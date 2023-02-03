@@ -1,9 +1,6 @@
 <div class="container" >
- <input type="radio" id="form1" name="form" >
-  <label for="form1">Formulario Persona Fisica</label>
-  <input type="radio" id="form2" name="form" >
-  <label for="form2">Formulario Empresa</label>
-  <form action="/tasks/add" method="post" >
+
+  <form  method="post" >
   <div id="formID">
     <img src="/icons/LogoTesoreria-1.png" width="130" height="80" >
       <img src="/icons/logomopc.png" width="100" height="50" style="margin: 0 0 0 52%;">
@@ -45,73 +42,7 @@
         /></div></div>
 
     {{! Input nombre/apellido }}
-    <div id="form1-content">
     <div class="row">
-      <div class="col-1">
-        <label class="form-label" for="nombre">Nombres</label></div>
-      <div class="col-4">
-        <input
-          id="nombre"
-          class="form-control sin-borde"
-          type="text"
-          name="nombre"
-          placeholder="Nombre"
-        /></div>
-
-      <div class="col-2" style="margin:0 -7% 0 0;">
-        <label class="form-label" for="apellido">Apellidos</label></div>
-      <div class="col-4">
-        <input
-          id="apellido"
-          class="form-control sin-borde"
-          type="text"
-          name="apellido"
-          placeholder="Apellido"
-        /></div>
-
-    </div>
-    {{! Input cedula/puesto}}
-    <div class="row">
-      <div class="col-1">
-        <label class="form-label" for="cedula">Cedula</label></div>
-      <div class="col-4">
-        <input
-          id="cedula"
-          class="form-control sin-borde"
-          type="text"
-          name="cedula"
-          placeholder="Cedula"
-        /></div>
-
-      <div class="col-2" style="margin:0 -7% 0 0;">
-        <label class="form-label" for="puesto">Puesto</label></div>
-      <div class="col-4">
-        <input
-          id="puesto"
-          class="form-control sin-borde"
-          type="text"
-          name="puesto"
-          placeholder="Puesto"
-        /></div>
-
-    </div>
-    {{! Input departamento}}
-    <div class="row">
-      <div class="col-1">
-        <label class="form-label" for="departamento">Dep.</label></div>
-      <div class="col-9" style="padding: 0 -1% 0 0;">
-        <input
-          id="departamento"
-          class="form-control sin-borde"
-          type="text"
-          name="departamento"
-          placeholder="Departamento"
-        /></div>
-    </div>
-    </div>
-
-    <div id="form2-content" style="display:none;">
-      <div class="row">
      <div class="col-1">
         <label class="form-label" for="cedula">RNC</label></div>
       <div class="col-4">
@@ -124,17 +55,16 @@
         /></div>
 
        <div class="col-1">
-        <label class="form-label" for="nombreEmpresa">Nombres</label></div>
+        <label class="form-label" for="nombre">Nombres</label></div>
       <div class="col-4">
         <input
-          id="nombreEmpresa"
+          id="nombre"
           class="form-control sin-borde"
           type="text"
-          name="nombreEmpresa"
+          name="nombre"
           placeholder="Nombre"
         /></div>
 
-    </div>
     </div>
     {{! Input CK/MOTIVO ck }}
     <div class="row">
@@ -173,7 +103,7 @@
           name="fecha"
           placeholder="Fecha"
         /></div></div>
-
+</form>
     <h5 style="padding: 0 0 0 42%;">Recibido por</h5>
     {{! Input nombre/apellido }}
     <div class="row">
@@ -294,12 +224,12 @@
         <div class="col-3">
         <label class="form-label">Recibido por</label></div>
         <div class="col-3">
-        <label class="form-label">Aprobado por</label></div>
+        <label class="form-label">Firmado por</label></div>
 
     </div>
-   
+    </div>
     {{!-- <button class="btn btn-primary" type="submit">Guardar</button> --}}
-</div>
+
   </form>
     <button class="btn btn-primary" onclick="genPDF()">Imprimir</button>
     <script>
@@ -321,21 +251,5 @@ if (count == null) {
 count++;
 localStorage.setItem("count", count);
     document.getElementById("formNo").value = count;
-</script>
-<script>
-  const form1 = document.getElementById("form1");
-const form2 = document.getElementById("form2");
-const form1Content = document.getElementById("form1-content");
-const form2Content = document.getElementById("form2-content");
-
-form1.addEventListener("change", function() {
-  form1Content.style.display = "block";
-  form2Content.style.display = "none";
-});
-
-form2.addEventListener("change", function() {
-  form1Content.style.display = "none";
-  form2Content.style.display = "block";
-});
 </script>
 </div>
