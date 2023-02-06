@@ -4,7 +4,7 @@
   <input type="radio" id="form2" name="form" >
   <label for="form2">Formulario Empresa</label>
   <form action="/tasks/add" method="post" >
-  <div id="formID">
+  <br id="formID">
     <img src="/icons/LogoTesoreria-1.png" width="130" height="80" >
       <img src="/icons/logomopc.png" width="100" height="50" style="margin: 0 0 0 52%;">
       
@@ -138,34 +138,23 @@
     </div>
     {{! Input CK/MOTIVO ck }}
     <div class="row">
-      <div class="col-1">
-        <label class="form-label" for="ckMotivo">#CK</label></div>
-      <div class="col-4">
-        <input
-          id="ckMotivo"
-          class="form-control sin-borde"
-          type="text"
-          name="ckMotivo"
-          placeholder="CK"
-        /></div>
 
-      <div class="col-2" style="padding:0 -7% 0 0;">
-        <label class="form-label" for="motivoCK">Motivo del CK</label></div>
-      <div class="col-4" style="padding:0 9% 0 0;">
+      <div class="col-2"  style="margin:0 -7% 0 0;">
+        <label class="form-label" for="motivoCK">Motivo CK</label></div>
+      <div class="col-9">
         <textarea
           id="motivoCK"
           class="form-control sin-borde"
           name="motivoCK"
-          cols="50"
+          cols="20"
           placeholder="Motivo de CK"
         ></textarea></div>
 
     </div>
-
     <div class="row">
-      <div class="col-1" style="margin:-3% 0 0 0;">
+      <div class="col-1">
         <label class="form-label" for="fecha">Fecha</label></div>
-      <div class="col-4" style="margin:-3% 0 0 0;">
+      <div class="col-4" >
         <input
           id="fecha"
           class="form-control sin-borde"
