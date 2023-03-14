@@ -246,12 +246,13 @@
     <button class="btn btn-primary" onclick="genPDF()">Imprimir</button>
     
     <script>
+      var count = localStorage.getItem("count");
      function genPDF(){
     html2canvas(document.querySelector("#formID")).then(canvas => {
     var pdf = new jspdf.jsPDF();
     pdf.addImage(canvas.toDataURL('image/jpg'),'JPG',20, 10, 190, 190);
    //pdf.output('datauristring');
-    pdf.save("descarga.pdf");
+    pdf.save(`${count}`+".pdf");
 });
 }
     </script>
