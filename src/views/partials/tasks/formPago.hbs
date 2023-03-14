@@ -7,8 +7,7 @@
   <div id="formID">
     <img src="/icons/LogoTesoreria-1.png" width="130" height="80" >
       <img src="/icons/logomopc.png" width="100" height="50" style="margin: 0 0 0 52%;">
-      
-    <div class="row">
+    <div class="row" style="margin: 2% 0 0 0;">
       <div class="col-1">
         <label class="form-label" for="formNo">Form.No</label>
       </div>
@@ -23,6 +22,7 @@
         
         </div>
     </div>
+    </br>
     <div class="row">
       <h5 style="text-align: center;">Ministerio de Obras Publicas y Comunicaciones</h5>
       <h5 style="text-align: center;">(MOPC)</h5>
@@ -161,8 +161,9 @@
           name="fecha"
           placeholder="Fecha"
         /></div></div>
-
+</br>
     <h5 style="padding: 0 0 0 42%;">Entregado por</h5>
+    </br> 
     {{! Input nombre/apellido }}
     <div class="row">
       <div class="col-1">
@@ -213,33 +214,30 @@
         /></div>
 
     </div>
-    </div>
+    
      </br>
      <div class="row">
       <div class="col-1"></div>
-      <div class="col-3">
+      <div class="col-4">
         <input
           class="form-control sin-borde"
           type="text"
         /></div>
-        <div class="col-3">
+        <div class="col-4">
         <input
           class="form-control sin-borde"
           type="text"
         /></div>
-        <div class="col-3">
-    
 
     </div>
-     <div class="row">
+        <div class="row">
 <div class="col-1"></div>
-      <div class="col-3">
+      <div class="col-4">
         <label class="form-label">Entregado Por</label></div>
-        <div class="col-3">
+        <div class="col-4">
         <label class="form-label">Recibido por</label></div>
 
     </div>
-   
     {{!-- <button class="btn btn-primary" type="submit">Guardar</button> --}}
 </div>
   </form>
@@ -250,7 +248,7 @@
      function genPDF(){
     html2canvas(document.querySelector("#formID")).then(canvas => {
     var pdf = new jspdf.jsPDF();
-    pdf.addImage(canvas.toDataURL('image/jpg'),'JPG',20, 10, 190, 190);
+    pdf.addImage(canvas.toDataURL('image/jpg'),'JPG',20, 5, 190, 190);
    //pdf.output('datauristring');
     pdf.save(`${count}`+".pdf");
 });
