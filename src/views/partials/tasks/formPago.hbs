@@ -221,14 +221,13 @@
     </br>
      </br>
      <div class="row">
-      <div class="col-1"></div>
-      <div class="col-5">
+      <div class="col-5" style="margin:0 -7% 0 7%; padding:0 6% 0 3%;">
         <input
           class="form-control sin-borde"
           type="text"
         /></div>
 <div class="col-1"></div>
-        <div class="col-5">
+        <div class="col-5" style="padding:0 8% 0 1%;">
         <input
           class="form-control sin-borde"
           type="text"
@@ -237,7 +236,7 @@
     </div>
         <div class="row">
 <div class="col-2"></div>
-      <div class="col-7">
+      <div class="col-5">
         <label class="form-label">Entregado Por</label></div>
         <div class="col-2">
         <label class="form-label">Recibido por</label></div>
@@ -253,7 +252,7 @@
      function genPDF(){
     html2canvas(document.querySelector("#formID")).then(canvas => {
     var pdf = new jspdf.jsPDF();
-    pdf.addImage(canvas.toDataURL('image/jpg'),'JPG',20, 5, 190, 190);
+    pdf.addImage(canvas.toDataURL('image/jpg'),'JPG',20, 30, 190, 190);
    //pdf.output('datauristring');
     pdf.save(`${count}`+".pdf");
 });
