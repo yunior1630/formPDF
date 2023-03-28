@@ -96,9 +96,9 @@
     </div>
     {{! Input departamento}}
     <div class="row">
-      <div class="col-1">
+      <div class="col-1" >
         <label class="form-label" for="departamento">Dep.</label></div>
-      <div class="col-9" style="padding: 0 -1% 0 0;">
+      <div class="col-9" style="margin:0 0 1%  1%;">
         <input
           id="departamento"
           class="form-control sin-borde"
@@ -141,15 +141,30 @@
       <div class="col-2"  style="margin:0 -7% 0 0;">
         <label class="form-label" for="motivoCK">Motivo CK</label></div>
       <div class="col-9">
-        <textarea
+        {{!-- <textarea
+        wrap="hard"
+        style="white-space: pre-wrap !important; word-wrap: break-word;"
           id="motivoCK"
-          class="form-control sin-borde"
+          class="sin-borde"
           name="motivoCK"
-          cols="20"
+          cols="60"
+          rows="4"
           placeholder="Motivo de CK"
-        ></textarea></div>
+        ></textarea> --}}
+        <div 
+        contenteditable="true" 
+        wrap="hard"
+        style="white-space: pre-wrap !important; word-wrap: break-word;"
+          id="motivoCK"
+          class="sin-borde"
+          name="motivoCK"
+          cols="60"
+          rows="4"
+          placeholder="Motivo de CK"></div>
+        </div>
 
     </div>
+    
     <div class="row">
       <div class="col-1">
         <label class="form-label" for="fecha">Fecha</label></div>
