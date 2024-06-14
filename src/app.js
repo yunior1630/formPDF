@@ -5,11 +5,7 @@ import { create } from "express-handlebars";
 
 import indexRoutes from "./routes/tasks.routes";
 
-import firebaseApp from './firebaseConfig';
 
-// Ejemplo de uso
-const db = firebaseApp.firestore();
-const auth = firebaseApp.auth();
 
 
 const app = express();
