@@ -9,11 +9,11 @@ var _tasks = require("../controllers/tasks.controllers");
 var router = (0, _express.Router)();
 var routerServer = "/chequemopc";
 // Render all tasks
-router.get(routerServer, _tasks.renderTasks);
-router.post(routerServer + "/tasks/add", _tasks.createTask);
-router.get(routerServer + "/tasks/:id/toggleDone", _tasks.taskToggleDone);
-router.get(routerServer + "/tasks/:id/edit", _tasks.renderTaskEdit);
-router.post(routerServer + "/tasks/:id/edit", _tasks.editTask);
-router.get(routerServer + "/tasks/:id/delete", _tasks.deleteTask);
+router.get("/", _tasks.renderTasks);
+router.post("/tasks/add", _tasks.createTask);
+router.get("/tasks/:id/toggleDone", _tasks.taskToggleDone);
+router.get("/tasks/:id/edit", _tasks.renderTaskEdit);
+router.post("/tasks/:id/edit", _tasks.editTask);
+router.get("/tasks/:id/delete", _tasks.deleteTask);
 var _default = router;
 exports["default"] = _default;

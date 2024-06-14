@@ -9,7 +9,11 @@ var _express = _interopRequireDefault(require("express"));
 var _morgan = _interopRequireDefault(require("morgan"));
 var _expressHandlebars = require("express-handlebars");
 var _tasks = _interopRequireDefault(require("./routes/tasks.routes"));
+var _firebaseConfig = _interopRequireDefault(require("./firebaseConfig"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+// Ejemplo de uso
+var db = _firebaseConfig["default"].firestore();
+var auth = _firebaseConfig["default"].auth();
 var app = (0, _express["default"])();
 
 // settings

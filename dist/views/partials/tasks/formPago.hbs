@@ -1,11 +1,13 @@
 <div class="container" >
-
+ <input type="radio" id="form1" name="form" >
+  <label for="form1">Formulario Persona Fisica</label>
+  <input type="radio" id="form2" name="form" >
+  <label for="form2">Formulario Empresa</label>
   <form action="/tasks/add" method="post" >
   <div id="formID">
     <img src="/icons/LogoTesoreria-1.png" width="130" height="80" >
       <img src="/icons/logomopc.png" width="100" height="50" style="margin: 0 0 0 52%;">
-      
-    <div class="row">
+    <div class="row" style="margin: 2% 0 0 0;">
       <div class="col-1">
         <label class="form-label" for="formNo">Form.No</label>
       </div>
@@ -20,6 +22,7 @@
         
         </div>
     </div>
+    </br>
     <div class="row">
       <h5 style="text-align: center;">Ministerio de Obras Publicas y Comunicaciones</h5>
       <h5 style="text-align: center;">(MOPC)</h5>
@@ -27,7 +30,7 @@
     <br />
     <h5 style="text-align: center;">Formulario Entrega de Recursos</h5>
     <h5 style="text-align: center;">Fondo Reponible Institucional</h5>
-    <h5 style="text-align: center;">Entregado por</h5>
+    </br>
     {{! input ck}}
     <div class="row">
       <div class="col-1">
@@ -39,9 +42,22 @@
           type="text"
           name="ck"
           placeholder="CK"
-        /></div></div>
+        /></div>
+
+        <div class="col-2" style="margin:0 -7% 0 0;">
+        <label class="form-label" for="Monto">Monto CK</label></div>
+      <div class="col-4">
+        <input
+          id="Monto CK"
+          class="form-control sin-borde"
+          type="text"
+          name="Monto CK"
+          placeholder="Monto CK"
+        /></div>
+        </div>
 
     {{! Input nombre/apellido }}
+    <div id="form1-content">
     <div class="row">
       <div class="col-1">
         <label class="form-label" for="nombre">Nombres</label></div>
@@ -93,9 +109,9 @@
     </div>
     {{! Input departamento}}
     <div class="row">
-      <div class="col-1">
+      <div class="col-1" >
         <label class="form-label" for="departamento">Dep.</label></div>
-      <div class="col-9" style="padding: 0 -1% 0 0;">
+      <div class="col-9" style="margin:0 0 1%  1%;">
         <input
           id="departamento"
           class="form-control sin-borde"
@@ -104,36 +120,68 @@
           placeholder="Departamento"
         /></div>
     </div>
-    {{! Input CK/MOTIVO ck }}
-    <div class="row">
-      <div class="col-1">
-        <label class="form-label" for="ckMotivo">#CK</label></div>
-      <div class="col-4">
-        <input
-          id="ckMotivo"
-          class="form-control sin-borde"
-          type="text"
-          name="ckMotivo"
-          placeholder="CK"
-        /></div>
-
-      <div class="col-2" style="padding:0 -7% 0 0;">
-        <label class="form-label" for="motivoCK">Motivo del CK</label></div>
-      <div class="col-4" style="padding:0 9% 0 0;">
-        <textarea
-          id="motivoCK"
-          class="form-control sin-borde"
-          name="motivoCK"
-          cols="50"
-          placeholder="Motivo de CK"
-        ></textarea></div>
-
     </div>
 
+    <div id="form2-content" style="display:none;">
+      <div class="row">
+     <div class="col-1">
+        <label class="form-label" for="cedula">RNC</label></div>
+      <div class="col-4">
+        <input
+          id="RNC"
+          class="form-control sin-borde"
+          type="text"
+          name="RNC"
+          placeholder="RNC"
+        /></div>
+
+       <div class="col-1">
+        <label class="form-label" for="nombreEmpresa">Nombres</label></div>
+      <div class="col-4">
+        <input
+          id="nombreEmpresa"
+          class="form-control sin-borde"
+          type="text"
+          name="nombreEmpresa"
+          placeholder="Nombre"
+        /></div>
+
+    </div>
+    </div>
+    {{! Input CK/MOTIVO ck }}
     <div class="row">
-      <div class="col-1" style="margin:-3% 0 0 0;">
+
+      <div class="col-2"  style="margin:0 -7% 0 0;">
+        <label class="form-label" for="motivoCK">Motivo CK</label></div>
+      <div class="col-9">
+        {{!-- <textarea
+        wrap="hard"
+        style="white-space: pre-wrap !important; word-wrap: break-word;"
+          id="motivoCK"
+          class="sin-borde"
+          name="motivoCK"
+          cols="60"
+          rows="4"
+          placeholder="Motivo de CK"
+        ></textarea> --}}
+        <div 
+        contenteditable="true" 
+        wrap="hard"
+        style="white-space: pre-wrap !important; word-wrap: break-word;"
+          id="motivoCK"
+          class="sin-borde"
+          name="motivoCK"
+          cols="60"
+          rows="4"
+          placeholder="Motivo de CK"></div>
+        </div>
+
+    </div>
+    
+    <div class="row">
+      <div class="col-1">
         <label class="form-label" for="fecha">Fecha</label></div>
-      <div class="col-4" style="margin:-3% 0 0 0;">
+      <div class="col-4" >
         <input
           id="fecha"
           class="form-control sin-borde"
@@ -141,8 +189,9 @@
           name="fecha"
           placeholder="Fecha"
         /></div></div>
-</form>
-    <h5 style="padding: 0 0 0 42%;">Recibido por</h5>
+</br>
+    <h5 style="padding: 0 0 0 42%;">Entregado por</h5>
+    </br> 
     {{! Input nombre/apellido }}
     <div class="row">
       <div class="col-1">
@@ -152,6 +201,7 @@
           id="nombreRecibido"
           class="form-control sin-borde"
           type="text"
+          value="CLAUDIA M."
           name="nombreRecibido"
           placeholder="Nombre"
         /></div>
@@ -163,6 +213,7 @@
           id="apellidoRecibido"
           class="form-control sin-borde"
           type="text"
+          value="HERRERA MEDINA"
           name="apellidoRecibido"
           placeholder="Apellido"
         /></div>
@@ -178,6 +229,7 @@
           class="form-control sin-borde"
           type="text"
           name="cedulaRecibido"
+          value="001-0111647-3"
           placeholder="Cedula"
         /></div>
 
@@ -189,94 +241,48 @@
           class="form-control sin-borde"
           type="text"
           name="puestoRecibido"
+          value="ANALISTA FINANCIERA"
           placeholder="Puesto"
         /></div>
-
-    </div>
-    {{! Input departamento}}
-    <div class="row" >
-      <div class="col-1">
-        <label
-          class="form-label"
-          for="departamentoRecibido"
-        >Dep.</label></div>
-      <div class="col-9" style="padding: 0 -1% 0 0;">
-        <input
-          id="departamentoRecibido"
-          class="form-control sin-borde"
-          type="text"
-          name="departamentoRecibido"
-          placeholder="Departamento"
-        /></div>
-    </div>
-    {{! Input CK/MOTIVO ck }}
-    <div class="row">
-      <div class="col-1">
-        <label class="form-label" for="ckMotivoRecibido">#CK</label></div>
-      <div class="col-4">
-        <input
-          id="ckMotivoRecibido"
-          class="form-control sin-borde"
-          type="text"
-          name="ckMotivoRecibido"
-          placeholder="CK"
-        /></div>
-
-      <div class="col-2" style="padding:0 -7% 0 0;">
-        <label class="form-label" for="motivoCKRecibido">Motivo del CK</label></div>
-      <div class="col-4" style="padding:0 9% 0 0;">
-        <textarea
-          id="motivoCKRecibido"
-          class="form-control sin-borde"
-          name="motivoCKRecibido"
-          cols="50"
-          placeholder="Motivo de CK"
-        ></textarea></div>
 
     </div>
     </br>
      </br>
      <div class="row">
-      <div class="col-1"></div>
-      <div class="col-3">
+      <div class="col-5" style="margin:0 -7% 0 7%; padding:0 6% 0 3%;">
         <input
           class="form-control sin-borde"
           type="text"
         /></div>
-        <div class="col-3">
-        <input
-          class="form-control sin-borde"
-          type="text"
-        /></div>
-        <div class="col-3">
-        <input
-          class="form-control sin-borde"
-          type="text"
-        /></div>
-
-    </div>
-     <div class="row">
 <div class="col-1"></div>
-      <div class="col-3">
-        <label class="form-label">Entregado Por</label></div>
-        <div class="col-3">
-        <label class="form-label">Recibido por</label></div>
-        <div class="col-3">
-        <label class="form-label">Firmado por</label></div>
+        <div class="col-5" style="padding:0 8% 0 1%;">
+        <input
+          class="form-control sin-borde"
+          type="text"
+        /></div>
 
     </div>
+        <div class="row">
+<div class="col-2"></div>
+      <div class="col-5">
+        <label class="form-label">Entregado Por</label></div>
+        <div class="col-2">
+        <label class="form-label">Recibido por</label></div>
+
     </div>
     {{!-- <button class="btn btn-primary" type="submit">Guardar</button> --}}
-
+</div>
   </form>
     <button class="btn btn-primary" onclick="genPDF()">Imprimir</button>
+    
     <script>
+      var count = localStorage.getItem("count");
      function genPDF(){
     html2canvas(document.querySelector("#formID")).then(canvas => {
     var pdf = new jspdf.jsPDF();
-    pdf.addImage(canvas.toDataURL('image/jpg'),'JPG',20, 10, 190, 190);
+    pdf.addImage(canvas.toDataURL('image/jpg'),'JPG',20, 30, 190, 190);
    //pdf.output('datauristring');
-    pdf.save("descarga.pdf");
+    pdf.save(`${count}`+".pdf");
 });
 }
     </script>
@@ -289,5 +295,21 @@ if (count == null) {
 count++;
 localStorage.setItem("count", count);
     document.getElementById("formNo").value = count;
+</script>
+<script>
+  const form1 = document.getElementById("form1");
+const form2 = document.getElementById("form2");
+const form1Content = document.getElementById("form1-content");
+const form2Content = document.getElementById("form2-content");
+
+form1.addEventListener("change", function() {
+  form1Content.style.display = "block";
+  form2Content.style.display = "none";
+});
+
+form2.addEventListener("change", function() {
+  form1Content.style.display = "none";
+  form2Content.style.display = "block";
+});
 </script>
 </div>
